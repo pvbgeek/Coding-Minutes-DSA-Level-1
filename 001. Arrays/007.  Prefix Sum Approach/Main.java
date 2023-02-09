@@ -16,17 +16,15 @@ public class Main
 			for(int j=i; j<arr.length; j++)
 			{
 				int sum=0;
-				if(i==0)
+				if(i>0)
 				{
-					sum=prarr[i];
-					if(sum>currsum)
-					{currsum=sum;}
+					sum=prarr[j]-prarr[i-1];
+					if(sum>currsum){currsum=sum;}
 				}
 				else
 				{
-					sum=prarr[j]-prarr[i-1];
-					if(sum>currsum)
-					{currsum=sum;}
+					sum=prarr[j];
+					if(sum>currsum){currsum=sum;}
 				}
 			}
 		}
