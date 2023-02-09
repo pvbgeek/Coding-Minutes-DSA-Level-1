@@ -15,17 +15,12 @@ public class Main
 		{
 			for(int j=i; j<arr.length; j++)
 			{
-				int sum=0;
 				if(i>0)
-				{
-					sum=prarr[j]-prarr[i-1];
-					if(sum>currsum){currsum=sum;}
-				}
+				{sum = prarr[j]-prarr[i-1];}
 				else
-				{
-					sum=prarr[j];
-					if(sum>currsum){currsum=sum;}
-				}
+				{sum = prarr[j];}
+				
+				currsum = Math.max(sum,currsum);
 			}
 		}
 		return currsum;
