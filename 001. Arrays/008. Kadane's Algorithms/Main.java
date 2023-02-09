@@ -9,8 +9,8 @@ public class Main
 		for(int i=0; i<arr.length; i++)
 		{
 			sum+=arr[i];
+			ans = Math.max(sum,ans);
 			if(sum<0){sum=0;}
-			if(sum>ans){ans=sum;}
 		}
 		return ans;
 	}
